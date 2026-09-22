@@ -8,36 +8,31 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 body{font-family:'Poppins',sans-serif;overflow:hidden;background:#ffe4ec;touch-action:none}
-
-/* CARTA ROSITA */
 #cartas{height:100vh;overflow-y:auto;background:radial-gradient(circle at top,#fff0f5,#ffb6d9,#ff8fbb);display:flex;justify-content:center;padding:25px 15px}
-.carta{width:100%;max-width:480px;background:white;border-radius:28px;padding:28px 22px;box-shadow:0 15px 40px rgba(255,100,150,.25);text-align:center;height:fit-content;border:2px solid #ffb6d9}
-.carta h1{font-family:'Dancing Script';font-size:58px;color:#e75480}
-.foto{width:100%;border-radius:20px;margin:15px 0;object-fit:cover;max-height:380px;border:3px solid #ffb6d9;display:block}
-.frase-foto{background:#ffe4ec;border-left:5px solid #ff6fa0;padding:10px;border-radius:12px;margin:10px 0;font-style:italic;font-weight:600;color:#7a2a4a;text-align:left}
-.texto-amor{text-align:left;line-height:1.8;color:#5a2a3a;font-size:15px;margin:18px 0}
-.music-box{display:flex;gap:12px;align-items:center;background:#2a1020;color:white;border-radius:18px;padding:12px;text-align:left;margin-top:15px}
+.carta{width:100%;max-width:480px;background:white;border-radius:28px;padding:32px 22px;box-shadow:0 15px 40px rgba(255,100,150,.25);text-align:center;height:fit-content;border:2px solid #ffb6d9}
+.carta h1{font-family:'Dancing Script';font-size:62px;color:#e75480}
+.frase-foto{background:#ffe4ec;border-left:5px solid #ff6fa0;padding:12px;border-radius:12px;margin:14px 0;font-style:italic;font-weight:600;color:#7a2a4a;text-align:left}
+.texto-amor{text-align:left;line-height:1.9;color:#5a2a3a;font-size:15.5px;margin:20px 0}
+.music-box{display:flex;gap:12px;align-items:center;background:#2a1020;color:white;border-radius:18px;padding:12px;text-align:left;margin-top:18px}
 .music-box img{width:60px;height:60px;border-radius:12px;object-fit:cover}
-.btn-abrir{width:100%;margin-top:22px;background:linear-gradient(135deg,#ff6fa0,#e75480);color:white;border:none;padding:17px;border-radius:50px;font-weight:800;font-size:19px;cursor:pointer;box-shadow:0 8px 20px rgba(231,84,128,.4)}
-.btn-abrir:active{transform:scale(.97)}
-
+.btn-abrir{width:100%;margin-top:26px;background:linear-gradient(135deg,#ff6fa0,#e75480);color:white;border:none;padding:18px;border-radius:50px;font-weight:800;font-size:19px;cursor:pointer;box-shadow:0 8px 20px rgba(231,84,128,.4)}
 #universo{display:none;position:fixed;inset:0;background:#02010a;overflow:hidden;perspective:1000px;cursor:grab}
 #universo.active{display:block}
 #stars{position:absolute;inset:0;z-index:1}.star{position:absolute;width:2px;height:2px;background:white;border-radius:50%}
 .universe-center{position:absolute;top:50%;left:50%;width:100%;height:100%;display:flex;justify-content:center;align-items:center;transform-style:preserve-3d}
 .blackhole-wrap{position:relative;width:600px;height:600px;display:flex;justify-content:center;align-items:center;transform-style:preserve-3d}
-.blackhole{width:155px;height:155px;background:radial-gradient(circle at 30% 30%,#333,#000 65%);border-radius:50%;box-shadow:0 0 20px 10px #000,0 0 60px 30px rgba(255,100,150,.6),0 0 120px 60px rgba(255,182,217,.22);z-index:10}
+.blackhole{width:165px;height:165px;background:radial-gradient(circle at 30% 30%,#333,#000 65%);border-radius:50%;box-shadow:0 0 20px 10px #000,0 0 60px 30px rgba(255,100,150,.6),0 0 120px 60px rgba(255,182,217,.22);z-index:10}
 .ring{position:absolute;border-radius:50%;border:1px solid rgba(255,182,217,.3)}.ring1{width:270px;height:270px;transform:rotateX(75deg)}.ring2{width:380px;height:380px;transform:rotateX(75deg)}.ring3{width:500px;height:500px;transform:rotateX(75deg);border-style:dashed}
-.planet{position:absolute;transform-style:preserve-3d;cursor:pointer}.planet img{width:92px;height:92px;border-radius:18px;border:3px solid #ffb6d9;box-shadow:0 0 25px #ff8fbb;object-fit:cover}.p1{transform:rotateY(0deg) translateZ(210px)}.p2{transform:rotateY(180deg) translateZ(285px)}
-.sun360{position:absolute;left:50%;top:50%;font-size:30px;pointer-events:none;z-index:20}
+.planet{position:absolute;transform-style:preserve-3d;display:flex;justify-content:center;align-items:center;width:90px;height:90px;border-radius:20px;background:linear-gradient(135deg,#ffb6d9,#ff6fa0);border:3px solid #ffe4ec;box-shadow:0 0 25px #ff8fbb;font-size:42px}
+.p1{transform:rotateY(0deg) translateZ(220px)}.p2{transform:rotateY(180deg) translateZ(285px)}
+.sun360{position:absolute;left:50%;top:50%;font-size:32px;pointer-events:none;z-index:20}
 .frase360{position:absolute;left:50%;top:50%;white-space:nowrap;background:rgba(255,182,217,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,182,217,.5);padding:8px 16px;border-radius:25px;color:#ffb6d9;font-weight:700;font-size:14px;pointer-events:none;text-shadow:0 0 10px #ff6fa0;z-index:15}
-.luz-letter{position:fixed;font-family:'Dancing Script';font-size:52px;font-weight:800;color:#ffb6d9;text-shadow:0 0 20px #ff6fa0,0 0 40px #ffb6d9;pointer-events:none;z-index:60}
+.luz-letter{position:fixed;font-family:'Dancing Script';font-size:54px;font-weight:800;color:#ffb6d9;text-shadow:0 0 20px #ff6fa0,0 0 40px #ffb6d9;pointer-events:none;z-index:60}
 .explo-flower{position:fixed;font-size:28px;pointer-events:none;z-index:40}
 .title-uni{position:absolute;top:18px;width:100%;text-align:center;z-index:30;pointer-events:none}.title-uni h2{font-family:'Dancing Script';font-size:34px;color:#ffb6d9;text-shadow:0 0 20px #ff6fa0}
 .controls-hint{position:absolute;bottom:18px;width:100%;text-align:center;color:white;opacity:.55;font-size:11px;z-index:30;pointer-events:none;line-height:1.4}
 .btn-center{position:absolute;top:85px;right:15px;z-index:40;background:rgba(255,182,217,.18);backdrop-filter:blur(10px);border:1px solid rgba(255,182,217,.5);color:#ffb6d9;padding:10px 16px;border-radius:25px;font-weight:700;font-size:12px;cursor:pointer}
-#modalFoto{position:fixed;inset:0;background:rgba(30,10,20,.85);backdrop-filter:blur(10px);z-index:100;display:none;justify-content:center;align-items:center;padding:20px}
-#modalFoto.active{display:flex}.modal-box{background:white;border-radius:28px;padding:20px;width:100%;max-width:380px;text-align:center;animation:pop .4s cubic-bezier(.34,1.56,.64,1)}@keyframes pop{0%{transform:scale(.5)}100%{transform:scale(1)}}.modal-box img{width:100%;border-radius:18px;max-height:320px;object-fit:cover;border:3px solid #ffb6d9}.modal-box h3{font-family:'Dancing Script';font-size:32px;color:#e75480;margin:12px 0}.modal-box p{font-size:15px;color:#5a2a3a;line-height:1.6;font-weight:600}.hidden-audio{display:none}
+.hidden-audio{display:none}
 </style>
 </head>
 <body>
@@ -46,9 +41,8 @@ body{font-family:'Poppins',sans-serif;overflow:hidden;background:#ffe4ec;touch-a
 <div class="carta">
   <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#e75480">CARTA DE AMOR PARA</div>
   <h1>Angely 🩷</h1>
-  <p style="font-size:13px;opacity:.7">De: Cristhofer 🫣</p>
+  <p style="font-size:13px;opacity:.7;margin-bottom:10px">De: Cristhofer 🫣</p>
 
-  <img class="foto" src="https://files.evogb.win/6E6Gyh.jpg">
   <div class="frase-foto">👁️ "Tus ojos me tienen mal, Angely... no puedo dejar de mirarlos 🫣"</div>
 
   <div class="texto-amor">
@@ -62,44 +56,34 @@ body{font-family:'Poppins',sans-serif;overflow:hidden;background:#ffe4ec;touch-a
     <span style="font-family:'Dancing Script';font-size:32px;color:#e75480">Tuyo, Cristhofer 🩷🫣</span>
   </div>
 
-  <img class="foto" src="https://files.evogb.win/8E1mm0.jpg">
   <div class="frase-foto">🥺 "Tu carita bonita es mi lugar favorito"</div>
 
   <div class="music-box">
-    <img src="https://files.evogb.win/i1hl4C.jpg">
+    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=200">
     <div style="flex:1"><b>Nena - Gonzalo Genek</b><br><span style="font-size:11px;opacity:.7">Para ti, Angely 🩷</span>
       <audio controls loop><source src="https://files.evogb.win/BQ9gfb.mp3"></audio>
     </div>
   </div>
 
-  <button class="btn-abrir" onclick="abrir()">ABRIR MI UNIVERSO 🔓 🌌</button>
-  <p style="font-size:10px;opacity:.4;margin-top:10px">Hecho con 🩷 por Cristhofer para Angely</p>
+  <button class="btn-abrir" onclick="abrir()">ABRIR MI UNIVERSO 🔓 🩷</button>
+  <p style="font-size:10px;opacity:.4;margin-top:12px">Hecho con 🩷 por Cristhofer para Angely</p>
 </div>
 </div>
 
 <div id="universo">
   <div id="stars"></div>
-  <div class="title-uni"><h2>Mi Universo Eres Tú Angely 🌻</h2><p>Desliza 360° • Toca las fotos 🫣</p></div>
+  <div class="title-uni"><h2>Mi Universo Eres Tú Angely 🩷</h2><p>Desliza 360° suavecito</p></div>
   <button class="btn-center" onclick="centrar()">🎯 Centrar</button>
   <div class="controls-hint">👆 Desliza para mover • 🤏 Pellizca para zoom • 👆👆 Doble toque explota ANGELY 🩷</div>
   <div class="universe-center" id="center">
     <div class="blackhole-wrap">
       <div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div>
       <div class="blackhole"></div>
-      <div class="planet p1" onclick="verFoto('https://files.evogb.win/6E6Gyh.jpg','Tus ojos me matan, Angely 👁️🩷 No sabes lo linda que eres 🫣')"><img src="https://files.evogb.win/6E6Gyh.jpg"></div>
-      <div class="planet p2" onclick="verFoto('https://files.evogb.win/8E1mm0.jpg','Tu pelo y tu carita 🥺🩷 Me tienes loco, Angely hermosa')"><img src="https://files.evogb.win/8E1mm0.jpg"></div>
+      <div class="planet p1">👁️</div>
+      <div class="planet p2">🥺</div>
     </div>
   </div>
   <audio id="audioUni" class="hidden-audio" loop><source src="https://files.evogb.win/6cwrNy.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div id="modalFoto" onclick="this.classList.remove('active')">
-  <div class="modal-box">
-    <img id="modalImg" src="">
-    <h3>Angely 🩷🫣</h3>
-    <p id="modalText"></p>
-    <p style="margin-top:12px;font-size:12px;opacity:.6">Toca afuera para cerrar • Cristhofer 🩷</p>
-  </div>
 </div>
 
 <script>
@@ -117,12 +101,12 @@ universo.addEventListener('touchstart',e=>{if(e.touches.length==1){isDragging=tr
 universo.addEventListener('touchmove',e=>{if(!isDragging||e.touches.length!=1)return;e.preventDefault();let dx=e.touches[0].clientX-lastX,dy=e.touches[0].clientY-lastY;rotY+=dx*0.35;rotX=Math.max(-60,Math.min(30,rotX-dy*0.25));lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;updateTransform();},{passive:false});
 universo.addEventListener('touchend',()=>isDragging=false);
 let lastDist=0;universo.addEventListener('touchmove',e=>{if(e.touches.length==2){let d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);if(lastDist){scale=Math.max(0.6,Math.min(1.8,scale+(d-lastDist)*0.002));updateTransform();}lastDist=d;}},{passive:false});universo.addEventListener('touchend',()=>lastDist=0);
-function crearSun360(){let e=document.createElement('div');e.className='sun360';e.innerHTML='🌻';let ang=Math.random()*360,r=400+Math.random()*650;let x=Math.cos(ang*Math.PI/180)*r,y=Math.sin(ang*Math.PI/180)*r,z=(Math.random()-0.5)*900;e.animate([{transform:`translate3d(${x}px,${y}px,${z}px) scale(0)`,opacity:1},{transform:`translate3d(${x*0.1}px,${y*0.1}px,${z*0.1}px) scale(1.4)`,opacity:0}],{duration:4000});center.appendChild(e);setTimeout(()=>e.remove(),4000);}
-const frases=["TUS OJOS ANGELY 👁️🩷","TU PELO HERMOSO ✨","TU CARITA BONITA 🥺","ANGELY ERES MI TODO 🌻","ME ENCANTAS ANGELY 🫣","MI MUÑEQUITA 🩷","TU MIRADA 😍","MI NIÑA BONITA 🩷"];
+function crearSun360(){let e=document.createElement('div');e.className='sun360';e.innerHTML=Math.random()>0.5?'🌸':'🩷';let ang=Math.random()*360,r=400+Math.random()*650;let x=Math.cos(ang*Math.PI/180)*r,y=Math.sin(ang*Math.PI/180)*r,z=(Math.random()-0.5)*900;e.animate([{transform:`translate3d(${x}px,${y}px,${z}px) scale(0)`,opacity:1},{transform:`translate3d(${x*0.1}px,${y*0.1}px,${z*0.1}px) scale(1.4)`,opacity:0}],{duration:4000});center.appendChild(e);setTimeout(()=>e.remove(),4000);}
+const frases=["TUS OJOS ANGELY 👁️🩷","TU PELO HERMOSO ✨","TU CARITA BONITA 🥺","ANGELY ERES MI TODO 🌸","ME ENCANTAS ANGELY 🫣","MI MUÑEQUITA 🩷","TU MIRADA 😍","MI NIÑA BONITA 🩷"];
 function crearFrase360(){let f=document.createElement('div');f.className='frase360';f.innerText=frases[Math.floor(Math.random()*frases.length)];let x=(Math.random()-0.5)*800,y=(Math.random()-0.5)*500,z=(Math.random()-0.5)*500;let sc=0.8+Math.random()*1.2;f.animate([{transform:`translate3d(${x}px,${y}px,${z-700}px) scale(${sc*0.2})`,opacity:0},{transform:`translate3d(${x}px,${y}px,${z}px) scale(${sc*1.6})`,opacity:1,offset:0.5},{transform:`translate3d(${x}px,${y}px,${z+700}px) scale(${sc*0.2})`,opacity:0}],{duration:6000});center.appendChild(f);setTimeout(()=>f.remove(),6000);}
 let lastTap=0;
-universo.addEventListener('click',e=>{let now=Date.now();if(now-lastTap<350 && !e.target.closest('.planet')) explotar(e.clientX,e.clientY);lastTap=now;});
-universo.addEventListener('touchend',e=>{let now=Date.now();if(now-lastTap<350 && e.changedTouches.length && !e.target.closest('.planet')){let t=e.changedTouches[0];explotar(t.clientX,t.clientY);}lastTap=now;});
+universo.addEventListener('click',e=>{let now=Date.now();if(now-lastTap<350) explotar(e.clientX,e.clientY);lastTap=now;});
+universo.addEventListener('touchend',e=>{let now=Date.now();if(now-lastTap<350 && e.changedTouches.length){let t=e.changedTouches[0];explotar(t.clientX,t.clientY);}lastTap=now;});
 function explotar(cx,cy){
   if(navigator.vibrate)navigator.vibrate(80);
   const letras=["A","N","G","E","L","Y","🩷"];
@@ -131,9 +115,8 @@ function explotar(cx,cy){
     let ang=(idx/letras.length)*360;let dist=65+idx*30;let x=Math.cos(ang*Math.PI/180)*dist,y=Math.sin(ang*Math.PI/180)*dist;
     l.animate([{transform:`translate(-50%,-50%) translate(0,0) scale(0.2)`,opacity:0},{transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(1.6)`,opacity:1,offset:0.35},{transform:`translate(-50%,-50%) translate(${x*1.6}px,${y*1.6}px) scale(0)`,opacity:0}],{duration:2100});document.getElementById('universo').appendChild(l);setTimeout(()=>l.remove(),2100);
   });
-  for(let i=0;i<22;i++){let f=document.createElement('div');f.className='explo-flower';f.innerHTML=Math.random()>0.5?'🌻':'🩷';f.style.left=cx+'px';f.style.top=cy+'px';let ang=Math.random()*360,dist=60+Math.random()*320;let x=Math.cos(ang*Math.PI/180)*dist,y=Math.sin(ang*Math.PI/180)*dist;f.animate([{transform:`translate(-50%,-50%) translate(0,0) scale(0) rotate(0deg)`,opacity:1},{transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(${0.8+Math.random()}) rotate(500deg)`,opacity:0}],{duration:1800+Math.random()*800});document.getElementById('universo').appendChild(f);setTimeout(()=>f.remove(),2500);}
+  for(let i=0;i<22;i++){let f=document.createElement('div');f.className='explo-flower';f.innerHTML=Math.random()>0.5?'🌸':'🩷';f.style.left=cx+'px';f.style.top=cy+'px';let ang=Math.random()*360,dist=60+Math.random()*320;let x=Math.cos(ang*Math.PI/180)*dist,y=Math.sin(ang*Math.PI/180)*dist;f.animate([{transform:`translate(-50%,-50%) translate(0,0) scale(0) rotate(0deg)`,opacity:1},{transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(${0.8+Math.random()}) rotate(500deg)`,opacity:0}],{duration:1800+Math.random()*800});document.getElementById('universo').appendChild(f);setTimeout(()=>f.remove(),2500);}
 }
-function verFoto(src,texto){document.getElementById('modalImg').src=src;document.getElementById('modalText').innerText=texto;document.getElementById('modalFoto').classList.add('active');if(navigator.vibrate)navigator.vibrate([30,20,100]);explotar(window.innerWidth/2,window.innerHeight/2);}
 </script>
 </body>
 </html>
