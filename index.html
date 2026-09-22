@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Para Angely 🩷</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<title>Para Angely - Cristhofer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;overflow:hidden;background:#ffe4ec;touch-action:none}
 #cartas{height:100vh;overflow-y:auto;background:radial-gradient(circle at top,#fff0f5,#ffb6d9,#ff8fbb);display:flex;justify-content:center;padding:25px 15px}
-.carta{width:100%;max-width:480px;background:white;border-radius:28px;padding:32px 22px;box-shadow:0 15px 40px rgba(255,100,150,.25);text-align:center;border:2px solid #ffb6d9}
-.carta h1{font-family:'Dancing Script';font-size:62px;color:#e75480}
-.frase-foto{background:#ffe4ec;border-left:5px solid #ff6fa0;padding:12px;border-radius:12px;margin:14px 0;font-style:italic;font-weight:600;color:#7a2a4a;text-align:left}
-.texto-amor{text-align:left;line-height:1.9;color:#5a2a3a;font-size:15.5px;margin:20px 0}
-.btn-abrir{width:100%;margin-top:26px;background:linear-gradient(135deg,#ff6fa0,#e75480);color:white;border:none;padding:18px;border-radius:50px;font-weight:800;font-size:19px;cursor:pointer;box-shadow:0 8px 20px rgba(231,84,128,.4)}
-#universo{display:none;position:fixed;inset:0;background:#02010a;overflow:hidden;perspective:1000px;cursor:grab}
+.carta{width:100%;max-width:500px;background:white;border-radius:28px;padding:32px 24px;box-shadow:0 15px 40px rgba(255,100,150,.25);text-align:center;border:2px solid #ffb6d9}
+.carta h1{font-family:'Dancing Script';font-size:60px;color:#e75480}
+.sub{font-size:11px;letter-spacing:3px;font-weight:800;color:#e75480;margin-bottom:6px}
+.texto-amor{text-align:left;line-height:2;color:#5a2a3a;font-size:15px;margin:22px 0;white-space:pre-line}
+.divider{width:60px;height:3px;background:#ffb6d9;margin:18px auto;border-radius:10px}
+.firma{font-family:'Dancing Script';font-size:34px;color:#e75480;margin-top:18px}
+.btn-abrir{width:100%;margin-top:28px;background:linear-gradient(135deg,#ff6fa0,#e75480);color:white;border:none;padding:18px;border-radius:50px;font-weight:800;font-size:18px;cursor:pointer;box-shadow:0 8px 20px rgba(231,84,128,.4)}
+#universo{display:none;position:fixed;inset:0;background:#05020a;overflow:hidden;perspective:1000px;cursor:grab}
 #universo.active{display:block}
 #stars{position:absolute;inset:0;z-index:1}.star{position:absolute;background:white;border-radius:50%}
 .universe-center{position:absolute;top:50%;left:50%;width:100%;height:100%;display:flex;justify-content:center;align-items:center;transform-style:preserve-3d}
 .blackhole-wrap{position:relative;width:600px;height:600px;display:flex;justify-content:center;align-items:center;transform-style:preserve-3d}
-.blackhole{width:165px;height:165px;background:radial-gradient(circle at 30% 30%,#333,#000 65%);border-radius:50%;box-shadow:0 0 20px 10px #000,0 0 60px 30px rgba(255,100,150,.6);z-index:10}
-.ring{position:absolute;border-radius:50%;border:1px solid rgba(255,182,217,.3)}.ring1{width:270px;height:270px;transform:rotateX(75deg)}.ring2{width:380px;height:380px;transform:rotateX(75deg)}.ring3{width:500px;height:500px;transform:rotateX(75deg);border-style:dashed}
-.planet{position:absolute;width:90px;height:90px;border-radius:20px;background:linear-gradient(135deg,#ffb6d9,#ff6fa0);border:3px solid #ffe4ec;box-shadow:0 0 25px #ff8fbb;display:flex;justify-content:center;align-items:center;font-size:42px}
-.p1{transform:rotateY(0deg) translateZ(220px)}.p2{transform:rotateY(90deg) translateZ(220px)}.p3{transform:rotateY(180deg) translateZ(220px)}.p4{transform:rotateY(270deg) translateZ(220px)}
-.sun360{position:absolute;left:50%;top:50%;font-size:32px;pointer-events:none;z-index:20}
-.frase360{position:absolute;left:50%;top:50%;white-space:nowrap;background:rgba(255,182,217,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,182,217,.5);padding:8px 16px;border-radius:25px;color:#ffb6d9;font-weight:700;font-size:14px;pointer-events:none;z-index:15}
+.blackhole{width:150px;height:150px;background:radial-gradient(circle at 30% 30%,#333,#000 70%);border-radius:50%;box-shadow:0 0 30px 10px #000,0 0 80px 30px rgba(255,100,150,.5);z-index:10}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(255,182,217,.25)}.ring1{width:270px;height:270px;transform:rotateX(75deg)}.ring2{width:380px;height:380px;transform:rotateX(75deg)}.ring3{width:500px;height:500px;transform:rotateX(75deg);border-style:dashed}
+.planet{position:absolute;width:52px;height:52px;border-radius:50%;background:white;border:2px solid #ffb6d9;display:flex;justify-content:center;align-items:center;font-weight:800;color:#e75480;box-shadow:0 0 15px #ffb6d9;font-size:20px}
+.p1{transform:rotateY(0deg) translateZ(220px)}
+.p2{transform:rotateY(60deg) translateZ(220px)}
+.p3{transform:rotateY(120deg) translateZ(220px)}
+.p4{transform:rotateY(180deg) translateZ(220px)}
+.p5{transform:rotateY(240deg) translateZ(220px)}
+.p6{transform:rotateY(300deg) translateZ(220px)}
+.frase360{position:absolute;left:50%;top:50%;white-space:nowrap;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);border:1px solid rgba(255,182,217,.3);padding:8px 16px;border-radius:25px;color:#ffb6d9;font-weight:600;font-size:13px;pointer-events:none;z-index:15}
 .luz-letter{position:fixed;font-family:'Dancing Script';font-size:54px;font-weight:800;color:#ffb6d9;text-shadow:0 0 20px #ff6fa0;pointer-events:none;z-index:60}
-.explo-flower{position:fixed;font-size:28px;pointer-events:none;z-index:40}
-.title-uni{position:absolute;top:18px;width:100%;text-align:center;z-index:30;pointer-events:none}.title-uni h2{font-family:'Dancing Script';font-size:34px;color:#ffb6d9;text-shadow:0 0 20px #ff6fa0}
-.controls-hint{position:absolute;bottom:18px;width:100%;text-align:center;color:white;opacity:.55;font-size:11px;z-index:30;pointer-events:none}
-.btn-center{position:absolute;top:85px;right:15px;z-index:40;background:rgba(255,182,217,.18);backdrop-filter:blur(10px);border:1px solid rgba(255,182,217,.5);color:#ffb6d9;padding:10px 16px;border-radius:25px;font-weight:700;font-size:12px}
+.title-uni{position:absolute;top:22px;width:100%;text-align:center;z-index:30;pointer-events:none}.title-uni h2{font-family:'Dancing Script';font-size:32px;color:#ffb6d9}
+.controls-hint{position:absolute;bottom:20px;width:100%;text-align:center;color:white;opacity:.5;font-size:11px;z-index:30;pointer-events:none}
+.btn-center{position:absolute;top:85px;right:15px;z-index:40;background:rgba(255,182,217,.15);border:1px solid rgba(255,182,217,.4);color:#ffb6d9;padding:9px 14px;border-radius:25px;font-weight:700;font-size:12px}
 .hidden-audio{display:none}
 </style>
 </head>
@@ -37,36 +42,57 @@ body{font-family:'Poppins',sans-serif;overflow:hidden;background:#ffe4ec;touch-a
 
 <div id="cartas">
 <div class="carta">
-  <div style="font-size:11px;letter-spacing:3px;font-weight:800;color:#e75480">PARA</div>
-  <h1>Angely 🩷</h1>
-  <p style="font-size:13px;opacity:.6">De Cristhofer 🫣</p>
-  <div class="frase-foto">👁️ "Tus ojos me tienen mal 🫣"</div>
-  <div class="texto-amor">
-    Mi Angely:<br><br>
-    👁️ <b>Tus ojos:</b> Preciosos, me pierdo en ellos.<br>
-    💇‍♀️ <b>Tu pelo:</b> Hermoso, brillas demasiado.<br>
-    🥺 <b>Tu carita:</b> Mi debilidad, eres una muñequita.<br><br>
-    Me encantas mucho 🩷<br><br>
-    <span style="font-family:'Dancing Script';font-size:32px;color:#e75480">Cristhofer 🫣</span>
+  <div class="sub">CARTA PARA</div>
+  <h1>Angely</h1>
+  <p style="font-size:12px;opacity:.6;margin-top:4px">De Cristhofer</p>
+  <div class="divider"></div>
+
+  <div class="texto-amor">Mi Angely hermosa,
+
+No se en que momento paso, pero me gustas demasiado. Y no es solo gustar, es que me haces sentir cosas bonitas que hace tiempo no sentia.
+
+Me encantan tus ojos. Tienen algo que me atrapa, que me deja sin palabras cada vez que me miras. Podria quedarme horas mirandolos.
+
+Me encanta tu pelo. Te queda tan lindo, te hace ver tan hermosa, tan tu. Eres preciosa con cualquier peinado porque tu belleza es natural.
+
+Me encanta tu carita. Eres tan bonita, tan tierna, tan delicada. Tu carita es de esas que dan ganas de cuidar y proteger siempre.
+
+Pero sabes que es lo que mas me gusta? Todo lo que eres tu. Tu forma de ser, tu sonrisa, tu voz, tu manera de hacerme sentir especial sin siquiera intentarlo.
+
+No te voy a mentir, me pongo nervioso cuando estoy cerca de ti. Me importas mucho mas de lo que te imaginas. Y cada dia que pasa me gustas mas.
+
+No se que vaya a pasar, pero si quiero que sepas algo: para mi eres muy especial. Eres esa persona que llego y cambio todo sin hacer mucho ruido, pero cambiando todo.
+
+Me gustas, Angely. Mucho. Y queria que lo supieras de una forma bonita, como tu te mereces.
+
+Gracias por existir, gracias por ser tan linda por dentro y por fuera.
+
+  <span class="firma">Con mucho carino,
+  Cristhofer</span>
   </div>
-  <div class="frase-foto">🥺 "Tu carita es mi favorita"</div>
-  <button class="btn-abrir" onclick="abrir()">ABRIR UNIVERSO 🩷</button>
+
+  <div class="divider"></div>
+  <p style="font-size:11px;opacity:.5;margin-top:8px;letter-spacing:1px">PARA LA NINA MAS BONITA</p>
+
+  <button class="btn-abrir" onclick="abrir()">ABRIR MI UNIVERSO</button>
 </div>
 </div>
 
 <div id="universo">
   <div id="stars"></div>
-  <div class="title-uni"><h2>Angely eres mi universo 🩷</h2></div>
-  <button class="btn-center" onclick="centrar()">🎯 Centrar</button>
-  <div class="controls-hint">👆 Desliza 360° • 👆👆 Doble toque explota ANGELY</div>
+  <div class="title-uni"><h2>Mi universo eres tu, Angely</h2></div>
+  <button class="btn-center" onclick="centrar()">Centrar</button>
+  <div class="controls-hint">Desliza para mover en 360 grados - Doble toque para sorpresa</div>
   <div class="universe-center" id="center">
     <div class="blackhole-wrap">
       <div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div>
       <div class="blackhole"></div>
-      <div class="planet p1">👁️</div>
-      <div class="planet p2">💇‍♀️</div>
-      <div class="planet p3">🥺</div>
-      <div class="planet p4">🩷</div>
+      <div class="planet p1">A</div>
+      <div class="planet p2">N</div>
+      <div class="planet p3">G</div>
+      <div class="planet p4">E</div>
+      <div class="planet p5">L</div>
+      <div class="planet p6">Y</div>
     </div>
   </div>
   <audio id="audioUni" class="hidden-audio" loop><source src="https://files.evogb.win/6cwrNy.mp3"></audio>
@@ -77,13 +103,18 @@ for(let i=0;i<250;i++){let s=document.createElement('div');s.className='star';s.
 let center=document.getElementById('center');let rotY=0,rotX=-10,scale=1,isDragging=false,lastX=0,lastY=0;
 function updateTransform(){center.style.transform=`translate(-50%,-50%) scale(${scale}) rotateX(${rotX}deg) rotateY(${rotY}deg)`;}
 function centrar(){rotY=0;rotX=-10;scale=1;updateTransform();}
-function abrir(){document.getElementById('cartas').style.display='none';document.getElementById('universo').style.display='block';document.getElementById('universo').classList.add('active');document.getElementById('audioUni').play().catch(()=>{});updateTransform();requestAnimationFrame(function loop(){if(!isDragging){rotY+=0.04;updateTransform();}requestAnimationFrame(loop)});setInterval(()=>{let e=document.createElement('div');e.className='sun360';e.innerHTML=Math.random()>0.5?'🌸':'🩷';let ang=Math.random()*360,r=500;let x=Math.cos(ang*Math.PI/180)*r,y=Math.sin(ang*Math.PI/180)*r;e.animate([{transform:`translate3d(${x}px,${y}px,0) scale(0)`,opacity:1},{transform:`translate3d(0,0,0) scale(1.4)`,opacity:0}],{duration:4000});center.appendChild(e);setTimeout(()=>e.remove(),4000);},250);setInterval(()=>{let f=document.createElement('div');f.className='frase360';f.innerText=["TUS OJOS 👁️","TU PELO ✨","TU CARITA 🥺","ANGELY 🩷","ME ENCANTAS 🫣"][Math.floor(Math.random()*5)];let x=(Math.random()-0.5)*700,y=(Math.random()-0.5)*400;f.animate([{transform:`translate3d(${x}px,${y}px,-600px) scale(.2)`,opacity:0},{transform:`translate3d(${x}px,${y}px,0) scale(1.4)`,opacity:1,offset:.5},{transform:`translate3d(${x}px,${y}px,600px) scale(.2)`,opacity:0}],{duration:5000});center.appendChild(f);setTimeout(()=>f.remove(),5000);},700);}
+function abrir(){document.getElementById('cartas').style.display='none';let u=document.getElementById('universo');u.style.display='block';u.classList.add('active');document.getElementById('audioUni').play().catch(()=>{});updateTransform();(function loop(){if(!isDragging){rotY+=0.03;updateTransform();}requestAnimationFrame(loop)})();setInterval(crearFrase,800);}
+function crearFrase(){let f=document.createElement('div');f.className='frase360';f.innerText=["TUS OJOS","TU PELO","TU CARITA","ME GUSTAS MUCHO","ERES ESPECIAL","MI NINA BONITA","ANGELY"][Math.floor(Math.random()*7)];let x=(Math.random()-0.5)*700,y=(Math.random()-0.5)*400;f.animate([{transform:`translate3d(${x}px,${y}px,-600px) scale(.2)`,opacity:0},{transform:`translate3d(${x}px,${y}px,0) scale(1.3)`,opacity:1,offset:.5},{transform:`translate3d(${x}px,${y}px,600px) scale(.2)`,opacity:0}],{duration:5500});center.appendChild(f);setTimeout(()=>f.remove(),5500);}
 let universo=document.getElementById('universo');
 universo.addEventListener('touchstart',e=>{isDragging=true;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY},{passive:false});
-universo.addEventListener('touchmove',e=>{if(!isDragging)return;e.preventDefault();let dx=e.touches[0].clientX-lastX,dy=e.touches[0].clientY-lastY;rotY+=dx*0.35;rotX=Math.max(-60,Math.min(30,rotX-dy*0.25));lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;updateTransform();},{passive:false});
+universo.addEventListener('touchmove',e=>{if(!isDragging)return;e.preventDefault();let dx=e.touches[0].clientX-lastX,dy=e.touches[0].clientY-lastY;rotY+=dx*0.32;rotX=Math.max(-60,Math.min(30,rotX-dy*0.22));lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;updateTransform();},{passive:false});
 universo.addEventListener('touchend',()=>isDragging=false);
-let lastTap=0;universo.addEventListener('touchend',e=>{let now=Date.now();if(now-lastTap<350){let t=e.changedTouches[0];explotar(t.clientX,t.clientY);}lastTap=now;});
-function explotar(cx,cy){["A","N","G","E","L","Y","🩷"].forEach((l,i)=>{let d=document.createElement('div');d.className='luz-letter';d.innerText=l;d.style.left=cx+'px';d.style.top=cy+'px';let ang=i/7*360,dist=70+i*25;let x=Math.cos(ang*Math.PI/180)*dist,y=Math.sin(ang*Math.PI/180)*dist;d.animate([{transform:`translate(-50%,-50%) translate(0,0) scale(.2)`,opacity:0},{transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(1.5)`,opacity:1,offset:.4},{transform:`translate(-50%,-50%) translate(${x*1.5}px,${y*1.5}px) scale(0)`,opacity:0}],{duration:2000});universo.appendChild(d);setTimeout(()=>d.remove(),2000);});}
+universo.addEventListener('mousedown',e=>{isDragging=true;lastX=e.clientX;lastY=e.clientY});
+universo.addEventListener('mousemove',e=>{if(!isDragging)return;let dx=e.clientX-lastX,dy=e.clientY-lastY;rotY+=dx*0.32;rotX=Math.max(-60,Math.min(30,rotX-dy*0.22));lastX=e.clientX;lastY=e.clientY;updateTransform();});
+window.addEventListener('mouseup',()=>isDragging=false);
+let lastTap=0;universo.addEventListener('touchend',e=>{let now=Date.now();if(now-lastTap<300){let t=e.changedTouches[0];explotar(t.clientX,t.clientY);}lastTap=now;});
+universo.addEventListener('click',e=>{let now=Date.now();if(now-lastTap<300) explotar(e.clientX,e.clientY);lastTap=now;});
+function explotar(cx,cy){["A","N","G","E","L","Y"].forEach((l,i)=>{let d=document.createElement('div');d.className='luz-letter';d.innerText=l;d.style.left=cx+'px';d.style.top=cy+'px';let ang=i/6*360,dist=60+i*22;let x=Math.cos(ang*Math.PI/180)*dist,y=Math.sin(ang*Math.PI/180)*dist;d.animate([{transform:`translate(-50%,-50%) translate(0,0) scale(.2)`,opacity:0},{transform:`translate(-50%,-50%) translate(${x}px,${y}px) scale(1.4)`,opacity:1,offset:.4},{transform:`translate(-50%,-50%) translate(${x*1.4}px,${y*1.4}px) scale(0)`,opacity:0}],{duration:2000});universo.appendChild(d);setTimeout(()=>d.remove(),2000);});}
 </script>
 </body>
 </html>
